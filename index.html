@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marflow Software</title>
+  <meta name="description" content="Software by Marflow Software: documentation and downloads.">
+  <link rel="icon" href="TextTemplateManager-v2/images/logo.svg" type="image/svg+xml">
+  <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+  <style>
+    :root {
+      --ink: #232848; --ink-deep: #1c2140; --key: #3b4366; --card: #46507a; --slate: #545d7e;
+      --line: #7a84b0; --sub: #d3d7ee; --orange: #ff8c42;
+      --bg: #fbfbfd; --surface: #ffffff; --surface-line: #e3e5f0; --text: #262b44; --muted: #5b6280; --heading: #232848;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #191d33; --surface: #232848; --surface-line: #343b63; --text: #dfe2f1; --muted: #b3b8d4; --heading: #ffffff; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; }
+    a { color: inherit; }
+
+    header {
+      position: relative;
+      color: #fff;
+      background: linear-gradient(120deg, var(--ink-deep) 0%, var(--ink) 35%, var(--key) 70%, var(--slate) 100%);
+      padding: 72px 16px 64px;
+      overflow: hidden;
+    }
+    header::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 5px; background: var(--orange); }
+    .deco { position: absolute; border: 6px solid var(--line); border-radius: 18px; opacity: 0.35; }
+    .deco.a { width: 70px; height: 70px; top: 40px; right: 12%; transform: rotate(-12deg); }
+    .deco.b { width: 44px; height: 44px; bottom: 50px; right: 28%; transform: rotate(10deg); }
+    .deco.c { width: 56px; height: 56px; top: 90px; left: 8%; transform: rotate(14deg); }
+    .wrap { position: relative; max-width: 960px; margin: 0 auto; }
+    h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; }
+    h1 span { box-shadow: inset 0 -0.16em 0 var(--orange); }
+    .lead { margin: 0 0 22px; max-width: 560px; color: var(--sub); font-size: 1.1rem; }
+    .blog { display: inline-block; padding: 9px 18px; border: 2px solid rgba(255, 255, 255, 0.55); border-radius: 8px; color: #fff; font-weight: 650; text-decoration: none; transition: background-color 0.15s ease, border-color 0.15s ease; }
+    .blog:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--orange); }
+    ms-store-badge { display: block; margin: 0 0 14px; min-height: 64px; }
+
+    main { max-width: 960px; margin: 0 auto; padding: 48px 16px 24px; }
+    h2 { color: var(--heading); font-size: 1.4rem; margin: 0 0 20px; }
+    h2::after { content: ""; display: block; width: 44px; height: 4px; margin-top: 8px; border-radius: 2px; background: var(--orange); }
+
+    .product {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      background: var(--surface);
+      border: 1px solid var(--surface-line);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(28, 33, 64, 0.16);
+    }
+    .product .art { background: var(--ink) center / cover no-repeat; min-height: 260px; }
+    .product .body { padding: 28px 28px 24px; }
+    .product .title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
+    .product .title img { width: 52px; height: 52px; border-radius: 12px; }
+    .product h3 { margin: 0; font-size: 1.35rem; color: var(--heading); }
+    .product .tag { font-size: 0.85rem; color: var(--muted); }
+    .product p { margin: 0 0 20px; color: var(--muted); }
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-block; padding: 10px 18px; border-radius: 8px; font-weight: 650; text-decoration: none; font-size: 0.95rem; border: 2px solid transparent; transition: transform 0.15s ease, background-color 0.15s ease; }
+    .btn.primary { background: var(--orange); color: var(--ink-deep); box-shadow: 0 6px 18px rgba(255, 140, 66, 0.3); }
+    .btn.primary:hover { background: #ffa25f; transform: translateY(-1px); }
+    .btn.secondary { border-color: var(--line); color: var(--heading); }
+    .btn.secondary:hover { border-color: var(--orange); }
+
+    footer { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; color: var(--muted); font-size: 0.9rem; }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--orange); }
+
+    @media (max-width: 720px) {
+      .product { grid-template-columns: 1fr; }
+      .product .art { min-height: 180px; }
+      .deco { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="deco a"></div><div class="deco b"></div><div class="deco c"></div>
+    <div class="wrap">
+      <h1>Marflow <span>Software</span></h1>
+      <p class="lead">Small, focused tools for Windows. Documentation, help and downloads.</p>
+      <a class="blog" href="https://www.kmarflow.com">Read the blog at kmarflow.com &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+    <h2>Applications</h2>
+
+    <section class="product">
+      <div class="art" style="background-image: url('TextTemplateManager-v2/images/store/super-hero-art-slate.png')" role="img" aria-label="TextTemplateManager"></div>
+      <div class="body">
+        <div class="title">
+          <img src="TextTemplateManager-v2/images/logo.svg" alt="">
+          <div>
+            <h3>TextTemplateManager</h3>
+            <div class="tag">Windows &middot; Microsoft Store</div>
+          </div>
+        </div>
+        <p>Reusable text, one keystroke away: templates in folders, pasted into any Windows app from a global hotkey, and shared with your team through a synced file.</p>
+        <ms-store-badge productid="9nmbszllln6v" productname="TextTemplateManager" window-mode="direct" theme="dark"
+          size="large" language="en-us" animation="on"></ms-store-badge>
+        <div class="buttons">
+          <a class="btn primary" href="TextTemplateManager-v2/">Documentation</a>
+          <a class="btn secondary" href="https://github.com/halatsWol/TextTemplateManager-v2">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Marflow Software &middot; <a href="https://www.kmarflow.com">Blog: www.kmarflow.com</a> &middot; <a href="mailto:contact@kmarflow.com">contact@kmarflow.com</a>
+  </footer>
+</body>
+</html>
