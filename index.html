@@ -63,7 +63,7 @@
     .product h3 a::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: 16px; }
     .product h3 a:focus-visible { outline: none; }
     .product h3 a:focus-visible::after { outline: 3px solid var(--orange); outline-offset: -3px; }
-    .product ms-store-badge, .product .buttons { position: relative; z-index: 2; }
+    .product ms-store-badge, .product .buttons, .product .stores { position: relative; z-index: 2; }
     .product .art { background: var(--ink) center / cover no-repeat; min-height: 260px; }
     .product .art.code {
       display: flex; flex-direction: column; justify-content: center; gap: 10px;
@@ -73,6 +73,7 @@
     .product .art.code div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .product .art.code b { color: var(--orange); font-weight: 600; }
     .product + h2 { margin-top: 48px; }
+    .product + .product { margin-top: 48px; }
     .product .body { padding: 28px 28px 24px; }
     .product .title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
     .product .title img { width: 52px; height: 52px; border-radius: 12px; }
@@ -85,6 +86,9 @@
     .btn.primary:hover { background: #ffa25f; transform: translateY(-1px); }
     .btn.secondary { border-color: var(--line); color: var(--heading); }
     .btn.secondary:hover { border-color: var(--orange); }
+    .stores { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+    .stores a { display: inline-flex; align-items: center; padding: 6px 13px; border: 1px solid var(--surface-line); border-radius: 999px; color: var(--muted); font-size: 0.82rem; font-weight: 600; text-decoration: none; transition: border-color 0.15s ease, color 0.15s ease; }
+    .stores a:hover { border-color: var(--orange); color: var(--heading); }
 
     footer { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; color: var(--muted); font-size: 0.9rem; }
     footer a { color: var(--muted); }
@@ -131,6 +135,29 @@
         <div class="buttons">
           <a class="btn primary" href="TextTemplateManager-v2/manual/">Documentation</a>
           <a class="btn secondary" href="https://github.com/halatsWol/TextTemplateManager-v2">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div class="art" style="background-image: url('TTM-Connect/images/02-menu.png')" role="img" aria-label="TTM Connect"></div>
+      <div class="body">
+        <div class="title">
+          <img src="TTM-Connect/images/logo.png" alt="">
+          <div>
+            <h3><a href="TTM-Connect/">TTM Connect</a></h3>
+            <div class="tag">Browser extension &middot; Chrome, Edge &amp; Firefox</div>
+          </div>
+        </div>
+        <p>Bring your TextTemplateManager templates into the browser &mdash; right-click any editable field and paste, formatting intact.</p>
+        <div class="stores">
+          <a href="https://chrome.google.com/webstore/detail/jclopjpjdldbknjdhmjldehlkgbihlmi">Chrome Web Store</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/ttm-connect/fbpmhopmnaoedcnbegdkpfblekhaindm">Edge Add-ons</a>
+          <a href="https://addons.mozilla.org/addon/ttm-connect/">Firefox Add-ons</a>
+        </div>
+        <div class="buttons">
+          <a class="btn primary" href="TTM-Connect/manual/">Documentation</a>
+          <a class="btn secondary" href="https://github.com/halatsWol/TTM-Connect">GitHub</a>
         </div>
       </div>
     </section>
