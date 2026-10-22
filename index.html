@@ -38,7 +38,8 @@
     .lead { margin: 0 0 22px; max-width: 560px; color: var(--sub); font-size: 1.1rem; }
     .blog { display: inline-block; padding: 9px 18px; border: 2px solid rgba(255, 255, 255, 0.55); border-radius: 8px; color: #fff; font-weight: 650; text-decoration: none; transition: background-color 0.15s ease, border-color 0.15s ease; }
     .blog:hover { background: rgba(255, 255, 255, 0.12); border-color: var(--orange); }
-    ms-store-badge { display: block; margin: 0 0 14px; min-height: 64px; }
+    ms-store-badge { display: block; width: fit-content; margin: 0 0 14px; min-height: 56px; }
+    ms-store-badge::part(img) { width: 200px; height: auto; }
 
     main { max-width: 960px; margin: 0 auto; padding: 48px 16px 24px; }
     h2 { color: var(--heading); font-size: 1.4rem; margin: 0 0 20px; }
@@ -121,7 +122,12 @@
         </div>
         <p>Reusable text, one keystroke away: templates in folders, pasted into any Windows app from a global hotkey, and shared with your team through a synced file.</p>
         <ms-store-badge productid="9nmbszllln6v" productname="TextTemplateManager" window-mode="direct" theme="dark"
-          size="large" language="en-us" animation="on"></ms-store-badge>
+          size="large" language="en-us" animation="on">
+          <!-- HTML-only badge from microsoft/app-store-badge, shown only when the badge script doesn't run -->
+          <a href="https://apps.microsoft.com/detail/9nmbszllln6v?mode=direct">
+            <img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get it from Microsoft">
+          </a>
+        </ms-store-badge>
         <div class="buttons">
           <a class="btn primary" href="TextTemplateManager-v2/manual/">Documentation</a>
           <a class="btn secondary" href="https://github.com/halatsWol/TextTemplateManager-v2">GitHub</a>
