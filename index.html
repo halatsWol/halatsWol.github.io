@@ -47,7 +47,7 @@
     .product {
       position: relative;
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
       background: var(--surface);
       border: 1px solid var(--surface-line);
       border-radius: 16px;
@@ -64,6 +64,14 @@
     .product h3 a:focus-visible::after { outline: 3px solid var(--orange); outline-offset: -3px; }
     .product ms-store-badge, .product .buttons { position: relative; z-index: 2; }
     .product .art { background: var(--ink) center / cover no-repeat; min-height: 260px; }
+    .product .art.code {
+      display: flex; flex-direction: column; justify-content: center; gap: 10px;
+      padding: 28px; color: var(--sub); font: 0.9rem/1.5 "Cascadia Mono", Consolas, monospace;
+      background: linear-gradient(140deg, var(--ink-deep) 0%, var(--ink) 55%, var(--key) 100%);
+    }
+    .product .art.code div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .product .art.code b { color: var(--orange); font-weight: 600; }
+    .product + h2 { margin-top: 48px; }
     .product .body { padding: 28px 28px 24px; }
     .product .title { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; }
     .product .title img { width: 52px; height: 52px; border-radius: 12px; }
@@ -82,7 +90,7 @@
     footer a:hover { color: var(--orange); }
 
     @media (max-width: 720px) {
-      .product { grid-template-columns: 1fr; }
+      .product { grid-template-columns: minmax(0, 1fr); }
       .product .art { min-height: 180px; }
       .deco { display: none; }
     }
@@ -117,6 +125,29 @@
         <div class="buttons">
           <a class="btn primary" href="TextTemplateManager-v2/manual/">Documentation</a>
           <a class="btn secondary" href="https://github.com/halatsWol/TextTemplateManager-v2">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <h2>Toolbox</h2>
+
+    <section class="product">
+      <div class="art code" aria-hidden="true">
+        <div><b>PS&gt;</b> Get-HotFix | Sort-Object InstalledOn</div>
+        <div><b>PS&gt;</b> Get-CimInstance Win32_OperatingSystem</div>
+        <div><b>PS&gt;</b> Repair-WindowsImage -Online -RestoreHealth</div>
+        <div><b>PS&gt;</b> sfc /scannow</div>
+      </div>
+      <div class="body">
+        <div class="title">
+          <div>
+            <h3><a href="https://www.kmarflow.com/toolbox/cmdlets/">PowerShell cmdlets</a></h3>
+            <div class="tag">Toolbox &middot; on the blog</div>
+          </div>
+        </div>
+        <p>A curated collection of useful PowerShell commands for daily IT admin and service desk work: system and reboot info, CPU usage, hotfixes, and repairs for system files, WMI and Store apps.</p>
+        <div class="buttons">
+          <a class="btn primary" href="https://www.kmarflow.com/toolbox/cmdlets/">Open the cmdlets</a>
         </div>
       </div>
     </section>
