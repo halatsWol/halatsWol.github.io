@@ -17,6 +17,8 @@
       <stop offset="0.55" stop-color="#232848"/>
       <stop offset="1" stop-color="#545d7e"/>
     </linearGradient>
+    <linearGradient id="flow-light" gradientUnits="userSpaceOnUse" x1="29.13" y1="46" x2="34.88" y2="28"><stop offset="0.2" stop-color="#3f4768"/><stop offset="0.8" stop-color="#ff8c42"/></linearGradient>
+    <linearGradient id="flow-dark" gradientUnits="userSpaceOnUse" x1="29.13" y1="46" x2="34.88" y2="28"><stop offset="0.2" stop-color="#ffffff"/><stop offset="0.8" stop-color="#ff8c42"/></linearGradient>
   </defs>
   <g class="light">
     <rect width="64" height="64" rx="14" fill="url(#tile-light)"/>
@@ -31,8 +33,10 @@
     <g class="dark" stroke="#ffffff"><path d="M38 10.5h5"/><rect x="47" y="8" width="5" height="5" rx="1"/><path d="M56 8l5 5m0-5l-5 5"/></g>
   </g>
   <g fill="none" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round">
-    <path class="light" d="M9 28L14.75 46 20.5 33.63 26.25 46 32 28" stroke="#3f4768"/>
-    <path class="dark" d="M9 28L14.75 46 20.5 33.63 26.25 46 32 28" stroke="#ffffff"/>
-    <path d="M32 46L37.75 28 43.5 40.38 49.25 28 55 46" stroke="#ff8c42"/>
+    <path class="light" d="M11.88 28L17.63 46 23.38 33.63 29.13 46" stroke="#3f4768"/>
+    <path class="light" d="M29.13 46L34.88 28" stroke="url(#flow-light)"/>
+    <path class="dark" d="M11.88 28L17.63 46 23.38 33.63 29.13 46" stroke="#ffffff"/>
+    <path class="dark" d="M29.13 46L34.88 28" stroke="url(#flow-dark)"/>
+    <path d="M34.88 28L40.63 40.38 46.38 28 52.13 46" stroke="#ff8c42"/>
   </g>
 </svg>
