@@ -386,6 +386,9 @@ body.mf-landing { margin: 0; background: var(--mf-bg); color: var(--mf-text); fo
 .mf-landing .deco.b { width: 44px; height: 44px; bottom: 50px; right: 28%; transform: rotate(10deg); }
 .mf-landing .deco.c { width: 56px; height: 56px; top: 90px; left: 8%; transform: rotate(14deg); }
 .mf-landing .wrap { position: relative; max-width: 960px; margin: 0 auto; }
+.mf-landing .brand { display: flex; align-items: center; gap: 18px; margin: 0 0 14px; }
+.mf-landing .brand img { flex: none; width: clamp(48px, 7vw, 68px); height: auto; border-radius: 22%; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12); }
+.mf-landing .brand h1 { margin: 0; }
 .mf-landing h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; }
 .mf-landing h1 span { box-shadow: inset 0 -0.16em 0 var(--mf-orange); }
 .mf-landing .lead { margin: 0 0 22px; max-width: 560px; color: var(--mf-sub); font-size: 1.1rem; }
